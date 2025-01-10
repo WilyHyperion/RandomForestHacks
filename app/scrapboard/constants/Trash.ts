@@ -19,6 +19,6 @@ export const catagoryEmojis = {
     "glass": "🍷",
     "metal": "🔩",
     "paper": "📰",
-    "carboard": "📦",
+    "cardboard": "📦",
     "trash": "🗑️",
 }

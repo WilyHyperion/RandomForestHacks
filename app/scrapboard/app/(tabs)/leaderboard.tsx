@@ -39,7 +39,9 @@ export default function Leaderboard() {
         width: "100%",
     }}>
 
-        <View><ThemedText type="title" style={{fontFamily: "Ssonder", fontSize: 35}}>Leaderboard</ThemedText><Button title='Refresh' onPress={
+        <View><ThemedText type="title" style={{fontFamily: "Ssonder", fontSize: 35}}>Leaderboard</ThemedText><Button 
+        color={Colors.light.highlight}
+        title='Refresh' onPress={
             Refresh
         } ></Button></View>
         <FlatList style = {{

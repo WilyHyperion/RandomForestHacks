@@ -75,7 +75,7 @@ export default function submit() {
             </View>}
         {!permission && <Button onPress={requestPermission} title="grant permission" />}
         <Text style={{ fontFamily: 'Ssonder', fontSize: 50 }}>SCAN</Text>
-        <View style={{ width: 400, height: 400, borderRadius: 20, overflow: 'hidden', marginTop: 20 }}>
+        <View style={{ width: 360, height: 400, borderRadius: 20, overflow: 'hidden', marginTop: 20 }}>
             <CameraView style={{ width: 400, height: 400 }} facing="back" ref={ref}><View>
             </View></CameraView>
         </View>

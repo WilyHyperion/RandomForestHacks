@@ -94,21 +94,37 @@ export default function HomeScreen() {
       }
       <View style={{
         position: 'absolute',
-        left: 160,
+        left: 0,
         top: 300,
         zIndex: 10,
+        width: "100%",
       }}>{username != '' ? <View style={{
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
         gap: 8,
-      }}><ThemedText>{username}</ThemedText> </View> : <Button title='Sign Up' onPress={(e) => {
+      }}><ThemedText
+      style={{
+        fontFamily: 'ZTFormom',
+        fontSize: 20,
+        textAlign: 'center',
+        width: "100%"
+      }}
+      > Hi {username}</ThemedText> </View> : <View style = {{
+        
+      }}><TouchableOpacity  onPress={(e) => {
         setModel(true);
-      }}></Button>}</View>
+      }}> <Text style = {{
+        fontFamily: 'Ssonder',
+        fontSize: 25,
+        color: Colors.light.highlight,
+        textAlign: 'center',
+      }}>Sign Up</Text></TouchableOpacity> </View>}</View>
       <View style={{
         width: "100%",
         height: "100%",
         alignItems: 'center',
+        
         justifyContent: 'space-between',
         marginTop: 50,
         marginBottom: 200,
@@ -141,7 +157,13 @@ export default function HomeScreen() {
             gap: 20,
             paddingTop: 10,
           }}>
-              <TouchableOpacity style={
+              <TouchableOpacity 
+              onPress={
+                (e) => {
+                  navigation.navigate('submit')
+                }
+              }
+              style={
                 {
                   width: "40%",
                   backgroundColor: Colors.light.background,
@@ -183,11 +205,12 @@ export default function HomeScreen() {
 
             <TouchableOpacity onPress = {
               (e) => {
-                //navigation.navigate('submit')
-             //   navigation.navigate('locations')
+                
                 
               }
-              }style={
+              }
+              
+              style={
               {
                 width: "40%",
                   backgroundColor: Colors.light.background,
